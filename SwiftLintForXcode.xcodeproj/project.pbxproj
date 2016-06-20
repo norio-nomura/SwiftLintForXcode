@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C8200221D111C160053733B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8200211D111C160053733B /* AppDelegate.swift */; };
+		6C8200241D111C160053733B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8200231D111C160053733B /* Assets.xcassets */; };
+		6C8200271D111C160053733B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8200251D111C160053733B /* MainMenu.xib */; };
+		6C8200351D111C5B0053733B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8200341D111C5B0053733B /* Cocoa.framework */; };
+		6C82003A1D111C5B0053733B /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8200391D111C5B0053733B /* SourceEditorExtension.swift */; };
+		6C82003C1D111C5B0053733B /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C82003B1D111C5B0053733B /* SourceEditorCommand.swift */; };
+		6C8200401D111C5B0053733B /* SwiftLint.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C8200321D111C5B0053733B /* SwiftLint.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6CB3E9C01D14F141005A3C1B /* SwiftLintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C293C2F1D14E6AA0032DEF0 /* SwiftLintHelper.swift */; };
+		6CB822391D14DB4D00BFA3FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB822381D14DB4D00BFA3FA /* main.m */; };
+		6CB8223D1D14DB4D00BFA3FA /* SwiftLintHelper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 6CB822321D14DB4D00BFA3FA /* SwiftLintHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6CB822531D14DF7F00BFA3FA /* SwiftLintHelper.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CB822321D14DB4D00BFA3FA /* SwiftLintHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C82003E1D111C5B0053733B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8200161D111C160053733B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C8200311D111C5B0053733B;
+			remoteInfo = SourceEditorExtension;
+		};
+		6CB8223B1D14DB4D00BFA3FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8200161D111C160053733B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CB822311D14DB4D00BFA3FA;
+			remoteInfo = SwiftLintHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C8200441D111C5B0053733B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6C8200401D111C5B0053733B /* SwiftLint.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB822411D14DB4D00BFA3FA /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				6CB8223D1D14DB4D00BFA3FA /* SwiftLintHelper.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB822521D14DEAA00BFA3FA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				6CB822531D14DF7F00BFA3FA /* SwiftLintHelper.xpc in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6C293C2F1D14E6AA0032DEF0 /* SwiftLintHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLintHelper.swift; sourceTree = "<group>"; };
+		6C78DFBD1D14F2F7004A31EE /* SwiftLintHelper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftLintHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		6C82001E1D111C160053733B /* SwiftLintForXcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLintForXcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C8200211D111C160053733B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C8200231D111C160053733B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C8200261D111C160053733B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6C8200281D111C160053733B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8200321D111C5B0053733B /* SwiftLint.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftLint.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C8200341D111C5B0053733B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6C8200381D111C5B0053733B /* SwiftLint.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SwiftLint.entitlements; sourceTree = "<group>"; };
+		6C8200391D111C5B0053733B /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		6C82003B1D111C5B0053733B /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		6C82003D1D111C5B0053733B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CB822321D14DB4D00BFA3FA /* SwiftLintHelper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = SwiftLintHelper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CB822341D14DB4D00BFA3FA /* SwiftLintHelperProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLintHelperProtocol.h; sourceTree = "<group>"; };
+		6CB822381D14DB4D00BFA3FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6CB8223A1D14DB4D00BFA3FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CB822421D14DC0900BFA3FA /* SwiftLint-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftLint-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C82001B1D111C160053733B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C82002F1D111C5B0053733B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8200351D111C5B0053733B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB8222F1D14DB4D00BFA3FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C8200151D111C160053733B = {
+			isa = PBXGroup;
+			children = (
+				6C8200201D111C160053733B /* SwiftLintForXcode */,
+				6C8200361D111C5B0053733B /* SwiftLint */,
+				6CB822331D14DB4D00BFA3FA /* SwiftLintHelper */,
+				6C8200331D111C5B0053733B /* Frameworks */,
+				6C82001F1D111C160053733B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C82001F1D111C160053733B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C82001E1D111C160053733B /* SwiftLintForXcode.app */,
+				6C8200321D111C5B0053733B /* SwiftLint.appex */,
+				6CB822321D14DB4D00BFA3FA /* SwiftLintHelper.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C8200201D111C160053733B /* SwiftLintForXcode */ = {
+			isa = PBXGroup;
+			children = (
+				6C8200211D111C160053733B /* AppDelegate.swift */,
+				6C8200231D111C160053733B /* Assets.xcassets */,
+				6C8200251D111C160053733B /* MainMenu.xib */,
+				6C8200281D111C160053733B /* Info.plist */,
+			);
+			path = SwiftLintForXcode;
+			sourceTree = "<group>";
+		};
+		6C8200331D111C5B0053733B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C8200341D111C5B0053733B /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C8200361D111C5B0053733B /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				6C8200391D111C5B0053733B /* SourceEditorExtension.swift */,
+				6C82003B1D111C5B0053733B /* SourceEditorCommand.swift */,
+				6C82003D1D111C5B0053733B /* Info.plist */,
+				6C8200371D111C5B0053733B /* Supporting Files */,
+				6CB822421D14DC0900BFA3FA /* SwiftLint-Bridging-Header.h */,
+			);
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		6C8200371D111C5B0053733B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C8200381D111C5B0053733B /* SwiftLint.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6CB822331D14DB4D00BFA3FA /* SwiftLintHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6CB822381D14DB4D00BFA3FA /* main.m */,
+				6CB8223A1D14DB4D00BFA3FA /* Info.plist */,
+				6CB822341D14DB4D00BFA3FA /* SwiftLintHelperProtocol.h */,
+				6C293C2F1D14E6AA0032DEF0 /* SwiftLintHelper.swift */,
+				6C78DFBD1D14F2F7004A31EE /* SwiftLintHelper-Bridging-Header.h */,
+			);
+			path = SwiftLintHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C82001D1D111C160053733B /* SwiftLintForXcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C82002B1D111C160053733B /* Build configuration list for PBXNativeTarget "SwiftLintForXcode" */;
+			buildPhases = (
+				6C82001A1D111C160053733B /* Sources */,
+				6C82001B1D111C160053733B /* Frameworks */,
+				6C82001C1D111C160053733B /* Resources */,
+				6C8200441D111C5B0053733B /* Embed App Extensions */,
+				6CB822411D14DB4D00BFA3FA /* Embed XPC Services */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C82003F1D111C5B0053733B /* PBXTargetDependency */,
+				6CB8223C1D14DB4D00BFA3FA /* PBXTargetDependency */,
+			);
+			name = SwiftLintForXcode;
+			productName = SwiftLintAutoCorrect;
+			productReference = 6C82001E1D111C160053733B /* SwiftLintForXcode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C8200311D111C5B0053733B /* SwiftLint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C8200411D111C5B0053733B /* Build configuration list for PBXNativeTarget "SwiftLint" */;
+			buildPhases = (
+				6C82002E1D111C5B0053733B /* Sources */,
+				6C82002F1D111C5B0053733B /* Frameworks */,
+				6C8200301D111C5B0053733B /* Resources */,
+				6CB822521D14DEAA00BFA3FA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SourceEditorExtension;
+			productReference = 6C8200321D111C5B0053733B /* SwiftLint.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+		6CB822311D14DB4D00BFA3FA /* SwiftLintHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CB8223E1D14DB4D00BFA3FA /* Build configuration list for PBXNativeTarget "SwiftLintHelper" */;
+			buildPhases = (
+				6CB8222E1D14DB4D00BFA3FA /* Sources */,
+				6CB8222F1D14DB4D00BFA3FA /* Frameworks */,
+				6CB822301D14DB4D00BFA3FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftLintHelper;
+			productName = SwiftLintHelper;
+			productReference = 6CB822321D14DB4D00BFA3FA /* SwiftLintHelper.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C8200161D111C160053733B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Norio Nomura";
+				TargetAttributes = {
+					6C82001D1D111C160053733B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = PK9GMQ772L;
+						DevelopmentTeamName = "Norio Nomura";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					6C8200311D111C5B0053733B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = PK9GMQ772L;
+						DevelopmentTeamName = "Norio Nomura";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					6CB822311D14DB4D00BFA3FA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = PK9GMQ772L;
+						DevelopmentTeamName = "Norio Nomura";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6C8200191D111C160053733B /* Build configuration list for PBXProject "SwiftLintForXcode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C8200151D111C160053733B;
+			productRefGroup = 6C82001F1D111C160053733B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C82001D1D111C160053733B /* SwiftLintForXcode */,
+				6C8200311D111C5B0053733B /* SwiftLint */,
+				6CB822311D14DB4D00BFA3FA /* SwiftLintHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C82001C1D111C160053733B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8200241D111C160053733B /* Assets.xcassets in Resources */,
+				6C8200271D111C160053733B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C8200301D111C5B0053733B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB822301D14DB4D00BFA3FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C82001A1D111C160053733B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8200221D111C160053733B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C82002E1D111C5B0053733B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C82003A1D111C5B0053733B /* SourceEditorExtension.swift in Sources */,
+				6C82003C1D111C5B0053733B /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB8222E1D14DB4D00BFA3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CB3E9C01D14F141005A3C1B /* SwiftLintHelper.swift in Sources */,
+				6CB822391D14DB4D00BFA3FA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C82003F1D111C5B0053733B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C8200311D111C5B0053733B /* SwiftLint */;
+			targetProxy = 6C82003E1D111C5B0053733B /* PBXContainerItemProxy */;
+		};
+		6CB8223C1D14DB4D00BFA3FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CB822311D14DB4D00BFA3FA /* SwiftLintHelper */;
+			targetProxy = 6CB8223B1D14DB4D00BFA3FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C8200251D111C160053733B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C8200261D111C160053733B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C8200291D111C160053733B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-v";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C82002A1D111C160053733B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-v";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		6C82002C1D111C160053733B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftLintForXcode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.SwiftLintForXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6C82002D1D111C160053733B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftLintForXcode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.SwiftLintForXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6C8200421D111C5B0053733B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SwiftLint/SwiftLint.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftLint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.SwiftLintForXcode.SwiftLint";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLint/SwiftLint-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C8200431D111C5B0053733B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SwiftLint/SwiftLint.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftLint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.SwiftLintForXcode.SwiftLint";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLint/SwiftLint-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		6CB8223F1D14DB4D00BFA3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftLintHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.SwiftLintForXcode.SwiftLintHelper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLintHelper/SwiftLintHelper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6CB822401D14DB4D00BFA3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftLintHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.SwiftLintForXcode.SwiftLintHelper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftLintHelper/SwiftLintHelper-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C8200191D111C160053733B /* Build configuration list for PBXProject "SwiftLintForXcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C8200291D111C160053733B /* Debug */,
+				6C82002A1D111C160053733B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C82002B1D111C160053733B /* Build configuration list for PBXNativeTarget "SwiftLintForXcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C82002C1D111C160053733B /* Debug */,
+				6C82002D1D111C160053733B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C8200411D111C5B0053733B /* Build configuration list for PBXNativeTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C8200421D111C5B0053733B /* Debug */,
+				6C8200431D111C5B0053733B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CB8223E1D14DB4D00BFA3FA /* Build configuration list for PBXNativeTarget "SwiftLintHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CB8223F1D14DB4D00BFA3FA /* Debug */,
+				6CB822401D14DB4D00BFA3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C8200161D111C160053733B /* Project object */;
+}

@@ -9,8 +9,10 @@ SwiftLint for Xcode is a Xcode Extension that was created to run [SwiftLint](htt
 
 ## Install
 
-1. Clone this repository
-2. Run `xcodebuild -scheme SwiftLintForXcode install DSTROOT=~` and install `~/Applications/SwiftLintForXcode.app`
+1. Install Xcode 8
+2. If you are using OS X 10.11, running `sudo /usr/libexec/xpccachectl` and rebooting are required for using Xcode Extension.
+3. Clone this repository
+4. Run `xcodebuild -scheme SwiftLintForXcode install DSTROOT=~` and install `~/Applications/SwiftLintForXcode.app`
 
 ## Author
 

@@ -32,8 +32,7 @@ let targetContentUTIs = ["public.swift-source", "com.apple.dt.playgroundpage"]
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
-    func perform(with invocation: XCSourceEditorCommandInvocation,
-                 completionHandler: (NSError?) -> Void ) -> Void {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
 
         var error: NSError? = nil
         defer { completionHandler(error) }
@@ -41,7 +40,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         if !targetContentUTIs.contains(invocation.buffer.contentUTI) { return }
 
         do {
-            let fm = FileManager.default()
+            let fm = FileManager.default
             let temporaryDirectory = (NSTemporaryDirectory() as NSString)
                 .appendingPathComponent("autocorrect") as NSString
 
@@ -73,7 +72,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
             // check result
             if let autocorrected = try? String(contentsOfFile: source) as NSString
-                where invocation.buffer.completeBuffer != autocorrected {
+                , invocation.buffer.completeBuffer != autocorrected as String {
 
                 // update lines
                 var start = 0, end = 0, lineIndex = 0
@@ -86,7 +85,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                     let newLine = autocorrected.substring(with: lineRange)
 
                     let originalLine = invocation.buffer.lines[lineIndex] as! NSString
-                    if  originalLine != newLine {
+                    if  originalLine as String != newLine {
                         if lineIndex < originalLineCount {
                             invocation.buffer.lines[lineIndex] = newLine
                         } else {
@@ -130,7 +129,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         return connection
     }()
 
-    private enum SwiftLintError: ErrorProtocol {
+    private enum SwiftLintError: Error {
         case error(String)
         case helperConnectError
         case unknownCommandIdentifier

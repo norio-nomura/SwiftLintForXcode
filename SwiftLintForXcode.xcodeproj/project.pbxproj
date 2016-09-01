@@ -16,7 +16,6 @@
 		6C8200401D111C5B0053733B /* SwiftLint.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6C8200321D111C5B0053733B /* SwiftLint.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6CB3E9C01D14F141005A3C1B /* SwiftLintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C293C2F1D14E6AA0032DEF0 /* SwiftLintHelper.swift */; };
 		6CB822391D14DB4D00BFA3FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB822381D14DB4D00BFA3FA /* main.m */; };
-		6CB8223D1D14DB4D00BFA3FA /* SwiftLintHelper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 6CB822321D14DB4D00BFA3FA /* SwiftLintHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6CB822531D14DF7F00BFA3FA /* SwiftLintHelper.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CB822321D14DB4D00BFA3FA /* SwiftLintHelper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -47,17 +46,6 @@
 				6C8200401D111C5B0053733B /* SwiftLint.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6CB822411D14DB4D00BFA3FA /* Embed XPC Services */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
-			dstSubfolderSpec = 16;
-			files = (
-				6CB8223D1D14DB4D00BFA3FA /* SwiftLintHelper.xpc in Embed XPC Services */,
-			);
-			name = "Embed XPC Services";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6CB822521D14DEAA00BFA3FA /* CopyFiles */ = {
@@ -202,7 +190,6 @@
 				6C82001B1D111C160053733B /* Frameworks */,
 				6C82001C1D111C160053733B /* Resources */,
 				6C8200441D111C5B0053733B /* Embed App Extensions */,
-				6CB822411D14DB4D00BFA3FA /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
@@ -410,6 +397,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = PK9GMQ772L;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -433,6 +421,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -458,6 +447,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = PK9GMQ772L;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -473,6 +463,7 @@
 				OTHER_LDFLAGS = "-v";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -481,6 +472,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftLintForXcode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -494,6 +486,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftLintForXcode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -505,9 +498,9 @@
 		6C8200421D111C5B0053733B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SwiftLint/SwiftLint.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftLint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
@@ -523,9 +516,9 @@
 		6C8200431D111C5B0053733B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SwiftLint/SwiftLint.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftLint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
@@ -540,11 +533,11 @@
 		6CB8223F1D14DB4D00BFA3FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftLintHelper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.SwiftLintForXcode.SwiftLintHelper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -556,11 +549,11 @@
 		6CB822401D14DB4D00BFA3FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftLintHelper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../../../../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.norio-nomura.SwiftLintForXcode.SwiftLintHelper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

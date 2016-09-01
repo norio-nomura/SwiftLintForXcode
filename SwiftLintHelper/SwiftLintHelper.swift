@@ -30,7 +30,7 @@ import Foundation
 @objc class SwiftLintHelper: NSObject, SwiftLintHelperProtocol {
     func execute(in directory: String, with arguments: [String], reply: SwiftLintHelperResultHandler) {
 
-        let task = Task(), stdout = Pipe(), stderr = Pipe()
+        let task = Process(), stdout = Pipe(), stderr = Pipe()
         task.launchPath = "/usr/bin/env"
         task.arguments = ["/usr/local/bin/swiftlint"] + arguments
         task.currentDirectoryPath = directory

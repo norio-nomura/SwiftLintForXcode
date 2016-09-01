@@ -4,7 +4,7 @@
 SwiftLint for Xcode is a Xcode Extension that was created to run [SwiftLint](https://github.com/realm/SwiftLint).
 
 ## Requirements
-- Xcode 8.0 beta 1
+- Xcode 8.0 beta 6
 - [SwiftLint](https://github.com/realm/SwiftLint)
 
 ## Install

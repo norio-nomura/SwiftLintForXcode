@@ -112,8 +112,9 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                     invocation.buffer.selections.setArray(updatedSelections)
                 }
             }
-        } catch {
+        } catch let caughtError {
             print(error)
+            error = caughtError as NSError
             return
         }
 

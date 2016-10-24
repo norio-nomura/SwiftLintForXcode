@@ -28,7 +28,7 @@
 import Foundation
 
 @objc class SwiftLintHelper: NSObject, SwiftLintHelperProtocol {
-    func execute(in directory: String, with arguments: [String], reply: SwiftLintHelperResultHandler) {
+    func execute(in directory: String, with arguments: [String], reply: @escaping SwiftLintHelperResultHandler) {
 
         let task = Process(), stdout = Pipe(), stderr = Pipe()
         task.launchPath = "/usr/bin/env"

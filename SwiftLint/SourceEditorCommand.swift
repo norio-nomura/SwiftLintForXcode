@@ -34,7 +34,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
 
-        var error: NSError? = nil
+        var error: Error? = nil
         defer { completionHandler(error) }
 
         if !targetContentUTIs.contains(invocation.buffer.contentUTI) { return }
@@ -113,8 +113,8 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                 }
             }
         } catch let caughtError {
-            print(error)
-            error = caughtError as NSError
+            print(caughtError)
+            error = caughtError
             return
         }
 

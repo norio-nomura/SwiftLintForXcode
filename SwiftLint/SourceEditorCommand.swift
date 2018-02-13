@@ -130,10 +130,24 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         return connection
     }()
 
-    private enum SwiftLintError: Error {
+    private enum SwiftLintError: Error, CustomNSError, CustomStringConvertible {
         case error(String)
         case helperConnectError
         case unknownCommandIdentifier
+
+        // CustomNSError
+        var errorUserInfo: [String : Any] {
+            return [NSLocalizedDescriptionKey: description]
+        }
+
+        // CustomStringConvertible
+        var description: String {
+            switch self {
+            case .error(let message): return "error: \(message)"
+            case .helperConnectError: return "Helper Connectiont Error"
+            case .unknownCommandIdentifier: return "Unknown Command Identifier"
+            }
+        }
     }
 
     typealias ReplyHandler = (Int, String, String) throws -> Void
